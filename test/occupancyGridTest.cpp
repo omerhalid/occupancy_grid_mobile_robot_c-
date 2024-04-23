@@ -1,28 +1,39 @@
-// #include <gtest/gtest.h>
-// #include "dataProcessor.hpp"
-// #include "occupancyGrid.hpp"
+#include "gtest/gtest.h"
+#include "../include/OccupancyGrid.hpp"
 
-// // Mock classes or additional includes might be necessary depending on how
-// // your system interacts with external systems (like file I/O).
-    
-// // Test fixture for OccupancyGrid
-// class OccupancyGridTest : public ::testing::Test {
-// protected:
-//     OccupancyGrid grid;
+static constexpr float PRECISION = 1e-1;
 
-//     // You can set up the grid here if needed, like custom sizes or resolutions.
-//     void SetUp() override {
-//         // grid setup code here
-//     }
-// };
+class OccupancyGridTest : public ::testing::Test, public OccupancyGrid {
+protected:
+    void SetUp() override {
+        // This method is called before each test
+    }
 
-// TEST_F(OccupancyGridTest, GridInitialization) {
-//     EXPECT_EQ(grid.getOccupancyGrid().size(), 100);  // Assuming 100x100 grid based on the default constructor
+    void TearDown() override {
+        // This method is called after each test
+    }
+};
+
+TEST_F(OccupancyGridTest, TestCalculateCenterPosition) {
+    Position center = calculateCenterPosition(5, 5);
+    EXPECT_NEAR(center.x, -4.5, PRECISION);
+    EXPECT_NEAR(center.y, -4.5, PRECISION);
+}
+
+TEST_F(OccupancyGridTest, TestCalculateDistanceAndAngle) {
+    Position cellCenter{0.5, 0.5};
+    auto [distance, angle] = calculateDistanceAndAngle(0.0, 0.0, 0.0, cellCenter);
+    EXPECT_NEAR(distance, sqrt(0.5 * 0.5 + 0.5 * 0.5), PRECISION);
+    EXPECT_NEAR(angle, atan2(0.5, 0.5), PRECISION);
+}
+
+// TEST_F(OccupancyGridTest, TestUpdateGrid) {
+//     double sensorData[4] = {0.0, 0.0, 0.0, 0.0};
+//     updateGrid(0.0, 0.0, 0.0, sensorData);
+//     // Add assertions to check the state of the occupancy grid
 // }
 
-// TEST_F(OccupancyGridTest, UpdateGrid) {
-//     double sensorData[4] = {1.0, 1.0, 1.0, 1.0};  // Example sensor distances
-//     grid.updateGrid(5.0, 5.0, 0.0, sensorData);  // Robot in the center, facing north
-//     // Check specific grid cells to see if they have been marked correctly
-//     EXPECT_EQ(grid.getOccupancyGrid()[50][50], 1.0);  // Check the center cell
+// TEST_F(OccupancyGridTest, TestSaveToFile) {
+//     saveToFile("test.txt");
+//     // Add code to open the file and check its contents
 // }

@@ -16,7 +16,7 @@ def visualize_occupancy_grid(grid):
 
 if __name__ == '__main__':
     # Load the occupancy grid from the file (replace with your file path)
-    occupancy_grid_file_path = 'C:\\Users\\katka\\source\\continental_task_omer_cinar\\build\\Debug\\occupancy_grid2.csv'
+    occupancy_grid_file_path = 'C:\\Users\\katka\\source\\continental_task_omer_cinar\\build\\Debug\\occupancy_grid5.csv'
     occupancy_grid = load_occupancy_grid(occupancy_grid_file_path)
     
     # Visualize the occupancy grid

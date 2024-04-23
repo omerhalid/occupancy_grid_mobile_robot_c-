@@ -15,12 +15,14 @@ void DataProcessor::readCSVAndPopulateData(const std::string& dataFile, Occupanc
     // Skip the header line
     getline(dataStream, line);
 
+    // Read each line of the file
     while (getline(dataStream, line)) {
         std::stringstream lineStream(line);
         std::string cell;
-        std::vector<double> parsedData;
+        std::vector<double> parsedData; // the parsed data from the line is double
         std::cout << "Parsing line: " << line << std::endl;
 
+        // Parse each cell in the line
         while (getline(lineStream, cell, ',')) {
             try {
                 parsedData.push_back(stod(cell));
@@ -34,6 +36,7 @@ void DataProcessor::readCSVAndPopulateData(const std::string& dataFile, Occupanc
             throw std::runtime_error("Not enough data in line: " + line);
         }
 
+        // Extract the data from the parsedData vector
         double timestamp = parsedData[0];
         double robotX = parsedData[1];
         double robotY = parsedData[2];

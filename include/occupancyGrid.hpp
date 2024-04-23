@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "sensor.hpp"
+#include "position.hpp"
 
 /**
  * @class OccupancyGrid
@@ -35,7 +36,27 @@ public:
     /**
      * @brief Construct a new OccupancyGrid object.
      */
-    std::pair<double, double> calculateCenterPosition(int i, int j);
+    OccupancyGrid();
+
+    /**
+     * @brief Calculate the center position of a cell in the occupancy grid.
+     * 
+     * @param row The row index of the cell.
+     * @param column The column index of the cell.
+     * @return The center position of the cell.
+     */
+    Position calculateCenterPosition(int row, int column);
+
+    /**
+     * @brief Calculates the distance and angle from the robot to a cell.
+     *
+     * @param robotX The x-coordinate of the robot's position.
+     * @param robotY The y-coordinate of the robot's position.
+     * @param robotTheta The orientation of the robot in radians.
+     * @param cellCenter The center position of the cell.
+     * @return A pair containing the distance and angle from the robot to the cell.
+     */
+    std::pair<double, double> calculateDistanceAndAngle(double robotX, double robotY, double robotTheta, Position cellCenter);
 
     /**
      * @brief Update the occupancy grid based on the robot's position and sensor data.
