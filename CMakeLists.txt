@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)  # Minimum version of CMake required
-project(obstacle_map_task)            # Name of your project
+project(obstacle_map_task)
 
 # Force Google Test to use the same runtime library as your code
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -12,7 +12,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 # Set the compile flags for Debug and Release mode
 set(CMAKE_CXX_FLAGS_DEBUG "/MDd")
 set(CMAKE_CXX_FLAGS_RELEASE "/MD")
-set(CMAKE_CXX_STANDARD 17) # Use C++17 standard
+set(CMAKE_CXX_STANDARD 17) # Use C++17
 
 # Suppress the LNK4098 warning
 add_definitions( "/D_CRT_SECURE_NO_WARNINGS /wd4005 /wd4996 /nologo" )
@@ -24,6 +24,7 @@ find_package(Python COMPONENTS Interpreter Development REQUIRED)
 include_directories(${Python_INCLUDE_DIRS})
 
 # Include the NumPy headers
+# Note: This path may vary depending on your Python installation
 include_directories("C:/Python312/Lib/site-packages/numpy/core/include")
 
 file(GLOB APP_SOURCES "src/*.cpp" "inc/*.h")

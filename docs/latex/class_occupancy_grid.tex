@@ -1,0 +1,129 @@
+\doxysection{Occupancy\+Grid Class Reference}
+\hypertarget{class_occupancy_grid}{}\label{class_occupancy_grid}\index{OccupancyGrid@{OccupancyGrid}}
+
+
+A class representing an occupancy grid for a robot.  
+
+
+
+
+{\ttfamily \#include $<$occupancy\+Grid.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_occupancy_grid_a3d4e7e6c22ccb16d49b2b0bc3c1af04c}{Occupancy\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_occupancy_grid}{Occupancy\+Grid} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{class_occupancy_grid_a350d26962abba2ef76cd0c6f711a93ed}{calculate\+Center\+Position}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Calculate the center position of a cell in the occupancy grid. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \mbox{\hyperlink{class_occupancy_grid_a04cc49e66715647e026688d771f11146}{calculate\+Distance\+And\+Angle}} (double robotX, double robotY, double robot\+Theta, \mbox{\hyperlink{struct_position}{Position}} cell\+Center)
+\begin{DoxyCompactList}\small\item\em Calculates the distance and angle from the robot to a cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_occupancy_grid_a0b66a7a76e5b411faa632e2a71d8124b}{update\+Grid}} (double robotX, double robotY, double robot\+Theta, const double \texorpdfstring{$\ast$}{*}sensor\+Data)
+\begin{DoxyCompactList}\small\item\em Update the occupancy grid based on the robot\textquotesingle{}s position and sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_occupancy_grid_afd4f711aeea028cf843f7e6a3bbe0cbd}{save\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Save the occupancy grid to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing an occupancy grid for a robot. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_occupancy_grid_a3d4e7e6c22ccb16d49b2b0bc3c1af04c}\label{class_occupancy_grid_a3d4e7e6c22ccb16d49b2b0bc3c1af04c} 
+\index{OccupancyGrid@{OccupancyGrid}!OccupancyGrid@{OccupancyGrid}}
+\index{OccupancyGrid@{OccupancyGrid}!OccupancyGrid@{OccupancyGrid}}
+\doxysubsubsection{\texorpdfstring{OccupancyGrid()}{OccupancyGrid()}}
+{\footnotesize\ttfamily Occupancy\+Grid\+::\+Occupancy\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_occupancy_grid}{Occupancy\+Grid} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_occupancy_grid_a350d26962abba2ef76cd0c6f711a93ed}\label{class_occupancy_grid_a350d26962abba2ef76cd0c6f711a93ed} 
+\index{OccupancyGrid@{OccupancyGrid}!calculateCenterPosition@{calculateCenterPosition}}
+\index{calculateCenterPosition@{calculateCenterPosition}!OccupancyGrid@{OccupancyGrid}}
+\doxysubsubsection{\texorpdfstring{calculateCenterPosition()}{calculateCenterPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Occupancy\+Grid\+::calculate\+Center\+Position (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Calculate the center position of a cell in the occupancy grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row index of the cell. \\
+\hline
+{\em column} & The column index of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The center position of the cell. 
+\end{DoxyReturn}
+\Hypertarget{class_occupancy_grid_a04cc49e66715647e026688d771f11146}\label{class_occupancy_grid_a04cc49e66715647e026688d771f11146} 
+\index{OccupancyGrid@{OccupancyGrid}!calculateDistanceAndAngle@{calculateDistanceAndAngle}}
+\index{calculateDistanceAndAngle@{calculateDistanceAndAngle}!OccupancyGrid@{OccupancyGrid}}
+\doxysubsubsection{\texorpdfstring{calculateDistanceAndAngle()}{calculateDistanceAndAngle()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, double $>$ Occupancy\+Grid\+::calculate\+Distance\+And\+Angle (\begin{DoxyParamCaption}\item[{double}]{robotX,  }\item[{double}]{robotY,  }\item[{double}]{robot\+Theta,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{cell\+Center }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance and angle from the robot to a cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robotX} & The x-\/coordinate of the robot\textquotesingle{}s position. \\
+\hline
+{\em robotY} & The y-\/coordinate of the robot\textquotesingle{}s position. \\
+\hline
+{\em robot\+Theta} & The orientation of the robot in radians. \\
+\hline
+{\em cell\+Center} & The center position of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the distance and angle from the robot to the cell. 
+\end{DoxyReturn}
+\Hypertarget{class_occupancy_grid_afd4f711aeea028cf843f7e6a3bbe0cbd}\label{class_occupancy_grid_afd4f711aeea028cf843f7e6a3bbe0cbd} 
+\index{OccupancyGrid@{OccupancyGrid}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!OccupancyGrid@{OccupancyGrid}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void Occupancy\+Grid\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Save the occupancy grid to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_occupancy_grid_a0b66a7a76e5b411faa632e2a71d8124b}\label{class_occupancy_grid_a0b66a7a76e5b411faa632e2a71d8124b} 
+\index{OccupancyGrid@{OccupancyGrid}!updateGrid@{updateGrid}}
+\index{updateGrid@{updateGrid}!OccupancyGrid@{OccupancyGrid}}
+\doxysubsubsection{\texorpdfstring{updateGrid()}{updateGrid()}}
+{\footnotesize\ttfamily void Occupancy\+Grid\+::update\+Grid (\begin{DoxyParamCaption}\item[{double}]{robotX,  }\item[{double}]{robotY,  }\item[{double}]{robot\+Theta,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{sensor\+Data }\end{DoxyParamCaption})}
+
+
+
+Update the occupancy grid based on the robot\textquotesingle{}s position and sensor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robotX} & The x-\/coordinate of the robot\textquotesingle{}s position. \\
+\hline
+{\em robotY} & The y-\/coordinate of the robot\textquotesingle{}s position. \\
+\hline
+{\em robot\+Theta} & The orientation of the robot in radians. \\
+\hline
+{\em sensor\+Data} & An array of sensor readings. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{occupancy_grid_8hpp}{occupancy\+Grid.\+hpp}}\item 
+src/\mbox{\hyperlink{occupancy_grid_8cpp}{occupancy\+Grid.\+cpp}}\end{DoxyCompactItemize}

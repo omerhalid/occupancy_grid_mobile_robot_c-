@@ -3,17 +3,32 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
+/**
+ * @class DataProcessorTest
+ * @brief Test fixture for testing the DataProcessor class.
+ */
 class DataProcessorTest : public ::testing::Test, public DataProcessor {
 protected:
     DataProcessor processor;
     OccupancyGrid grid;
 };
 
+/**
+ * @test ReadCSVAndPopulateData_NoThrow
+ * @brief Test to verify that the readCSVAndPopulateData method does not throw any exceptions.
+ * This test checks the case where the data file is a valid CSV file.
+ */
 TEST_F(DataProcessorTest, ReadCSVAndPopulateData_NoThrow) {
     std::string dataFile = "C:\\Users\\katka\\source\\continental_task_omer_cinar\\src\\robot1.csv";
     EXPECT_NO_THROW(processor.readCSVAndPopulateData(dataFile, grid));
 }
 
+/**
+ * @test CheckFirstRowOfCSV
+ * @brief Test to verify that the first row of the CSV file is read correctly.
+ * This test checks the case where the data file is a valid CSV file.
+ * The expected values for the first row are hardcoded in the test.
+ */
 TEST_F(DataProcessorTest, CheckFirstRowOfCSV) {
     std::string dataFile = "C:\\Users\\katka\\source\\continental_task_omer_cinar\\src\\robot1.csv";
     std::ifstream file(dataFile);

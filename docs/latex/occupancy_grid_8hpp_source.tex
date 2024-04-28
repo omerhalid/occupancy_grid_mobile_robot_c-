@@ -1,0 +1,37 @@
+\doxysection{occupancy\+Grid.\+hpp}
+\hypertarget{occupancy_grid_8hpp_source}{}\label{occupancy_grid_8hpp_source}\index{include/occupancyGrid.hpp@{include/occupancyGrid.hpp}}
+\mbox{\hyperlink{occupancy_grid_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OCCUPANCYGRID\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OCCUPANCYGRID\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sensor_8hpp}{sensor.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{position_8hpp}{position.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_occupancy_grid}{OccupancyGrid}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ mapWidth\ =\ 10.0;\ \textcolor{comment}{//\ Adjust\ as\ per\ the\ room\ size\ or\ area\ in\ which\ the\ robot\ operates}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ mapHeight\ =\ 10.0;}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ gridResolution\ =\ 0.1;\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<std::vector<double>>\ occupancyGrid;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_occupancy_grid_a3d4e7e6c22ccb16d49b2b0bc3c1af04c}{OccupancyGrid}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_occupancy_grid_a350d26962abba2ef76cd0c6f711a93ed}{calculateCenterPosition}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::pair<double,\ double>\ \mbox{\hyperlink{class_occupancy_grid_a04cc49e66715647e026688d771f11146}{calculateDistanceAndAngle}}(\textcolor{keywordtype}{double}\ robotX,\ \textcolor{keywordtype}{double}\ robotY,\ \textcolor{keywordtype}{double}\ robotTheta,\ \mbox{\hyperlink{struct_position}{Position}}\ cellCenter);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_occupancy_grid_a0b66a7a76e5b411faa632e2a71d8124b}{updateGrid}}(\textcolor{keywordtype}{double}\ robotX,\ \textcolor{keywordtype}{double}\ robotY,\ \textcolor{keywordtype}{double}\ robotTheta,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ sensorData);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_occupancy_grid_afd4f711aeea028cf843f7e6a3bbe0cbd}{saveToFile}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OCCUPANCYGRID\_H}}
+
+\end{DoxyCode}

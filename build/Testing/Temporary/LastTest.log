@@ -1,0 +1,19 @@
+Start testing: Apr 23 19:02 Central Europe Summer Time
+----------------------------------------------------------
+Test not available without configuration.  (Missing "-C <config>"?)
+1/1 Testing: MyGoogleTest
+1/1 Test: MyGoogleTest
+Command: "NOT_AVAILABLE"
+Directory: C:/Users/katka/source/continental_task_omer_cinar/build
+"MyGoogleTest" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MyGoogleTest" end time: Apr 23 19:02 Central Europe Summer Time
+"MyGoogleTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 23 19:02 Central Europe Summer Time

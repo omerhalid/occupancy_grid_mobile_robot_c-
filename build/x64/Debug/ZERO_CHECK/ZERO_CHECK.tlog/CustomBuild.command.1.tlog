@@ -1,0 +1,10 @@
+^C:\USERS\KATKA\SOURCE\CONTINENTAL_TASK_OMER_CINAR\BUILD\CMAKEFILES\A4972752B51ACBB494FE8DB6AC6FD3FB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/katka/source/continental_task_omer_cinar -BC:/Users/katka/source/continental_task_omer_cinar/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/katka/source/continental_task_omer_cinar/build/obstacle_map_task.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

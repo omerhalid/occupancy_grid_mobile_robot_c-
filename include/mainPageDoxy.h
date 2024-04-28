@@ -49,6 +49,8 @@
  * 5. Navigate to the `debug` directory: `cd debug`
  * 6. Run the executable with the path to the input CSV file specified: `.\main.exe`
  * 
+ * Note: Don't forget to change the directory path of the `robot1.csv` in order to run and compile it successfully.
+ * 
  * The output will be an occupancy grid saved in CSV format, representing detected obstacles.
  * 
  * To visualize the grid, you can run ./visu.py in the main directory. This script will generate a heatmap of the occupancy grid using matplotlib.
@@ -56,4 +58,13 @@
  * To run the test cases, after compiling the code navigate to the `debug` directory and run .\runUnitTests.exe`
  *
  * Note: This project requires a C++17 or later compiler and has dependencies on Google Test, Python 3 or later, and NumPy. Make sure all dependencies are resolved before compiling. The project is configured to use the same runtime library for Google Test as your code to avoid conflicts.
+ * 
+ *\section references_sec References
+ * 
+ * [1] "Occupancy Grids, MathWorks", https://www.mathworks.com/help/robotics/ug/occupancy-grids.html
+ * 
+ * [2] "What is an Occupancy Grid Map?", https://automaticaddison.com/what-is-an-occupancy-grid-map/
+ * 
+ * [3] "Time-of-Flight principle", https://www.terabee.com/time-of-flight-principle/#:~:text=The%20Time%2Dof%2DFlight%20principle%20(ToF)%20is%20a,being%20reflected%20by%20an%20object.
+ * 
  */

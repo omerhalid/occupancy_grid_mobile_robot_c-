@@ -1,0 +1,49 @@
+\doxysection{Sensor Struct Reference}
+\hypertarget{struct_sensor}{}\label{struct_sensor}\index{Sensor@{Sensor}}
+
+
+A struct representing a sensor on a robot.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \mbox{\hyperlink{struct_sensor_afaba01da5f8231e2ff374ffc32b55b2d}{sensor\+Angle\+Offset}} = M\+\_\+\+PI / 4
+\begin{DoxyCompactList}\small\item\em The angle offset of the sensor in radians. \end{DoxyCompactList}\item 
+static constexpr double \mbox{\hyperlink{struct_sensor_a61936162e96dcd744239816a638e7311}{sensor\+Angle}} = 30 \texorpdfstring{$\ast$}{*} (M\+\_\+\+PI / 180)
+\begin{DoxyCompactList}\small\item\em The angle of the sensor\textquotesingle{}s field of view in radians. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A struct representing a sensor on a robot. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_sensor_a61936162e96dcd744239816a638e7311}\label{struct_sensor_a61936162e96dcd744239816a638e7311} 
+\index{Sensor@{Sensor}!sensorAngle@{sensorAngle}}
+\index{sensorAngle@{sensorAngle}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{sensorAngle}{sensorAngle}}
+{\footnotesize\ttfamily constexpr double Sensor\+::sensor\+Angle = 30 \texorpdfstring{$\ast$}{*} (M\+\_\+\+PI / 180)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The angle of the sensor\textquotesingle{}s field of view in radians. 
+
+This is the angle between the two lines that define the edges of the sensor\textquotesingle{}s field of view. This value is set to 30 degrees (30 \texorpdfstring{$\ast$}{*} PI/180 radians). \Hypertarget{struct_sensor_afaba01da5f8231e2ff374ffc32b55b2d}\label{struct_sensor_afaba01da5f8231e2ff374ffc32b55b2d} 
+\index{Sensor@{Sensor}!sensorAngleOffset@{sensorAngleOffset}}
+\index{sensorAngleOffset@{sensorAngleOffset}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{sensorAngleOffset}{sensorAngleOffset}}
+{\footnotesize\ttfamily constexpr double Sensor\+::sensor\+Angle\+Offset = M\+\_\+\+PI / 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The angle offset of the sensor in radians. 
+
+This is the angle between the direction the robot is facing and the direction the sensor is pointing. A positive value means the sensor is pointing to the right of the direction the robot is facing. This value is set to 45 degrees (PI/4 radians). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{sensor_8hpp}{sensor.\+hpp}}\end{DoxyCompactItemize}

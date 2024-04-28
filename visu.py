@@ -1,3 +1,8 @@
+#The function load_occupancy_grid(file_path) uses np.genfromtxt to read the CSV file into a NumPy array. 
+#Each value in the CSV (typically 0 or 1, representing free or occupied spaces respectively) is loaded into the corresponding cell in the NumPy array.
+
+#plt.imshow() is the function used to display the data. The grid parameter is the NumPy array loaded from the CSV file.
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -7,7 +12,11 @@ def load_occupancy_grid(file_path):
 
 # Function to visualize the occupancy grid
 def visualize_occupancy_grid(grid):
+    # The cmap='Greys' parameter sets the color map to "Greys", which displays lower values as lighter shades and higher values as darker shades. 
+    # Since occupied cells have a value of 1, they appear as black in this grayscale map, and free cells (0) appear as white
     plt.imshow(grid, cmap='Greys', interpolation='none', origin='lower')
+    # origin='lower' sets the [0, 0] index of the array to appear at the bottom-left corner of the plot, 
+    # making the visualization align with typical Cartesian coordinates used in most mapping systems.
     plt.colorbar(label='Occupancy')
     plt.title('Occupancy Grid Map')
     plt.xlabel('X Coordinate')

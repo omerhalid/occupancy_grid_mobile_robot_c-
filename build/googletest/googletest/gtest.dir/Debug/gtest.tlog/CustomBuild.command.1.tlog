@@ -1,0 +1,10 @@
+^C:\USERS\KATKA\SOURCE\CONTINENTAL_TASK_OMER_CINAR\GOOGLETEST\GOOGLETEST\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/katka/source/continental_task_omer_cinar -BC:/Users/katka/source/continental_task_omer_cinar/build --check-stamp-file C:/Users/katka/source/continental_task_omer_cinar/build/googletest/googletest/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

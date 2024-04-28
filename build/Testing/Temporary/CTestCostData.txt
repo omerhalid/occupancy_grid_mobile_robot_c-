@@ -1,0 +1,3 @@
+MyGoogleTest 0 0
+---
+MyGoogleTest
